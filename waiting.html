@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Waiting Room — Quizzy</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">QUIZ<span>ZY</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="btn btn-outline">← Home</a>
+    </div>
+  </nav>
+
+  <div class="wait-wrap">
+
+    <div class="pin-display">
+      <p>Game PIN</p>
+      <h2 id="game-pin">------</h2>
+      <small>Share this PIN with players!</small>
+    </div>
+
+    <!-- Players joining form -->
+    <div class="card" id="join-panel">
+      <h3>Pick Your Avatar</h3>
+      <p class="sub" style="margin-bottom: 14px;">Choose an avatar and enter your name.</p>
+
+      <div class="avatar-grid" id="avatar-grid"></div>
+
+      <label for="player-name">Your Name</label>
+      <input type="text" id="player-name" placeholder="e.g., QuizNinja99" maxlength="20"/>
+
+      <button class="btn btn-yellow btn-full btn-lg mt" id="join-game-btn">🎮 Join Game</button>
+    </div>
+
+    <!-- Shown after joining -->
+    <div class="card" id="joined-msg" style="display: none;">
+      <p>✅ You're in! Waiting for the host to start…</p>
+    </div>
+
+    <!-- Players list -->
+    <div class="players-section" id="players-section" style="display: none;">
+      <div class="players-head">
+        <h3>Players in Room</h3>
+        <span class="count-badge">👥 <span id="player-count">0</span> joined</span>
+      </div>
+      <div class="players-grid" id="players-grid"></div>
+    </div>
+
+    <!-- Host controls -->
+    <div class="host-bar" id="host-bar" style="display: none;">
+      <a href="dashboard.html" class="btn btn-outline">← Dashboard</a>
+      <button class="btn btn-yellow btn-lg" onclick="alert('Quiz gameplay coming in Phase 3! 🎯')">▶ Start Quiz</button>
+    </div>
+
+  </div>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+  <script> initWaiting(); </script>
+</body>
+</html>

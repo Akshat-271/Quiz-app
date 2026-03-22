@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Log In — Quizzy</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">QUIZ<span>ZY</span></a>
+    <div class="nav-links">
+      <a href="signup.html" class="btn btn-outline">Sign Up</a>
+    </div>
+  </nav>
+
+  <div class="page-center">
+    <div class="box">
+      <h1>Welcome Back 👋</h1>
+      <p class="sub">No account? <a href="signup.html">Sign up free →</a></p>
+
+      <div class="card">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="your_username"/>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Your password"/>
+
+        <p class="error" id="error"></p>
+
+        <button class="btn btn-cyan btn-full btn-lg mt" id="login-btn">Log In →</button>
+      </div>
+
+      <p class="back-link">← <a href="index.html">Back to Home</a></p>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+  <script> initLogin(); </script>
+</body>
+</html>

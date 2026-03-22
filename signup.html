@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up — Quizzy</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">QUIZ<span>ZY</span></a>
+    <div class="nav-links">
+      <a href="login.html" class="btn btn-outline">Log In</a>
+    </div>
+  </nav>
+
+  <div class="page-center">
+    <div class="box">
+      <h1>Create Account 🚀</h1>
+      <p class="sub">Already have one? <a href="login.html">Log in →</a></p>
+
+      <div class="card">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="cool_quizmaster" maxlength="20"/>
+
+        <label for="password">Password (min. 6 characters)</label>
+        <input type="password" id="password" placeholder="Create a password"/>
+
+        <p class="error" id="error"></p>
+
+        <button class="btn btn-green btn-full btn-lg mt" id="signup-btn">Create Account →</button>
+      </div>
+
+      <p class="back-link">← <a href="index.html">Back to Home</a></p>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+  <script src="script.js"></script>
+  <script> initSignup(); </script>
+</body>
+</html>
