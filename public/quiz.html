@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz — Quizzy</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">QUIZ<span>ZY</span></a>
+    <div class="nav-links" id="nav-links"></div>
+  </nav>
+
+  <div class="quiz-wrap">
+
+    <!-- Waiting for first question -->
+    <div class="spinner" id="waiting-view">
+      <p style="font-size: 2rem;">⏳</p>
+      <p>Waiting for the game to start…</p>
+    </div>
+
+    <!-- Question view -->
+    <div class="hidden" id="question-view">
+      <div class="quiz-header">
+        <span class="q-progress" id="q-num">1 / 1</span>
+        <span class="q-score" id="q-score">⭐ 0</span>
+      </div>
+
+      <div class="timer-wrap">
+        <div class="timer-bar-track">
+          <div class="timer-bar-fill" id="timer-fill" style="width: 100%"></div>
+        </div>
+        <div class="timer-text" id="timer-text">20s</div>
+      </div>
+
+      <div class="question-text" id="q-text">Loading…</div>
+
+      <div class="answers-grid" id="answers-grid"></div>
+    </div>
+
+    <!-- Between questions: scores -->
+    <div class="hidden" id="result-view">
+      <div class="result-box card">
+        <div class="result-text">Leaderboard</div>
+        <div class="scores-list" id="scores-list"></div>
+        <p class="sub" style="margin-top: 16px;">Next question coming up…</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+  <script> initQuiz(); </script>
+</body>
+</html>

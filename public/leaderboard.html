@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Final Results — Quizzy</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">QUIZ<span>ZY</span></a>
+    <div class="nav-links" id="nav-links"></div>
+  </nav>
+
+  <div class="lb-wrap">
+    <h1>🏆 Final Results</h1>
+    <p class="sub">Here's how everyone did!</p>
+
+    <div class="podium" id="podium"></div>
+
+    <div class="full-list">
+      <h3>Full Rankings</h3>
+      <div id="full-list"></div>
+    </div>
+
+    <div style="display: flex; gap: 12px; justify-content: center; margin-top: 28px;">
+      <a href="/" class="btn btn-outline">← Home</a>
+      <a href="/dashboard.html" class="btn btn-yellow">Go to Dashboard</a>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+  <script> initLeaderboard(); </script>
+</body>
+</html>

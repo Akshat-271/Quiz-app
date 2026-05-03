@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quizzy — Live Quiz Platform</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">QUIZ<span>ZY</span></div>
+    <div class="nav-links" id="nav-links"></div>
+  </nav>
+
+  <div class="page-center">
+    <div class="box hero">
+      <div class="hero-badge">🎮 Live Multiplayer Quiz Platform</div>
+      <h1>Play. Compete.<br><span>Win!</span></h1>
+      <p class="sub">Join a live quiz with a Game PIN, or create your own and host it live.</p>
+
+      <div class="card">
+        <label for="pin-input">Enter Game PIN to Join</label>
+        <div class="pin-row">
+          <input type="text" id="pin-input" placeholder="e.g. 482910" maxlength="6"/>
+          <button class="btn btn-cyan btn-lg" id="join-btn">Join →</button>
+        </div>
+        <div class="divider">or</div>
+        <button class="btn btn-yellow btn-full btn-lg" id="host-btn">✨ Create &amp; Host a Quiz</button>
+        <p class="hero-foot">New here? <a href="/signup.html">Sign up free</a> to host quizzes!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+  <script> initHome(); </script>
+</body>
+</html>

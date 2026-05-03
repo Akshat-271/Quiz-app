@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Quiz — Quizzy</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">QUIZ<span>ZY</span></a>
+    <div class="nav-links" id="nav-links"></div>
+  </nav>
+
+  <input type="hidden" id="edit-id"/>
+
+  <div class="create-wrap">
+    <h1>Create a <span>Quiz</span></h1>
+    <p class="sub">Add a title, build your questions, then save.</p>
+
+    <div class="card mb">
+      <p class="sec-title">Quiz Info</p>
+      <label for="quiz-title">Title *</label>
+      <input type="text" id="quiz-title" placeholder="e.g., World Geography Trivia" maxlength="80" autofocus/>
+    </div>
+
+    <p class="sec-title">Questions</p>
+    <div id="questions-area"></div>
+
+    <button class="btn btn-outline add-btn" id="add-question-btn">+ Add Question</button>
+  </div>
+
+  <div class="save-bar">
+    <span>Save when ready</span>
+    <div class="save-actions">
+      <button class="btn btn-outline" id="cancel-btn">Cancel</button>
+      <button class="btn btn-orange" id="save-btn">💾 Save Quiz</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+  <script> initCreate(); </script>
+</body>
+</html>
